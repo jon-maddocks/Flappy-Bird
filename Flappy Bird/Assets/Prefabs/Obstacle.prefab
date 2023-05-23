@@ -111,8 +111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44fb211ccd8c211498dbb171ef30f015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 0}
+  sb: {fileID: 0}
   speed: 5
   posZ: 30
+  gameOver: 0
+  scoreIncremented: 0
 --- !u!54 &4335685087398043317
 Rigidbody:
   m_ObjectHideFlags: 0
