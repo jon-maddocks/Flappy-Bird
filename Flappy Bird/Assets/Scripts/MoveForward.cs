@@ -7,8 +7,8 @@ public class MoveForward : MonoBehaviour
     public PlayerController pc;
     public ScoreBoard sb;
 
-    public float speed = 20.0f;
-    public float posZ = 30;
+    public float speed = 5.0f;
+    public float posZ = 32;
     public bool gameOver=false;
     public bool scoreIncremented = false;
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class MoveForward : MonoBehaviour
             transform.Translate(new Vector3(0, 0, -speed) * Time.deltaTime);
         }
 
-        if (transform.position.z < -posZ && gameObject.CompareTag("TopObstacle") && gameObject.CompareTag("BottomObstacle"))
+        if (transform.position.z < -posZ && (gameObject.CompareTag("TopObstacle") || gameObject.CompareTag("BottomObstacle")))
         {
             Destroy(gameObject);
         }
