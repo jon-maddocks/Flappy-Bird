@@ -9,9 +9,9 @@ Flappy Bird recreated in the Unity engine. Infinite obstacles are spawned with v
 
 1-point is awarded to the user for every obstacle cleared.
 
-Future improvements:
-  Bird animations
-  Better physics control
-  Bug fixes for obstacles
-  More varying obstacles
-  Leaderboard
+Future improvements:<br>
+  Bird animations<br>
+  Better physics control<br>
+  Bug fixes for obstacles<br>
+  More varying obstacles<br>
+  Leaderboard<br>
