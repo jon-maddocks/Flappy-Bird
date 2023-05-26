@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     private ScoreBoard sb;
+    public AudioSource jumpSource;
+    public AudioSource gameOverSource;
+
+
     public float velocity = 20.0f;
     private bool gameOver = false;
 
@@ -31,9 +35,10 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && !gameOver)
         {
             playerRb.AddForce(transform.up * velocity);
+            jumpSource.Play();
         }
 
-        if(!gameOver)
+        if (!gameOver)
         {
             // Calculate the new position of the bird
             Vector3 newPosition = transform.position;
@@ -58,9 +63,9 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("TopObstacle") || collision.gameObject.CompareTag("BottomObstacle"))
         {
+            gameOverSource.Play();
             gameOver = true;
             sb.GameOverScreen();
-            
         }
     }
 
